@@ -1,6 +1,7 @@
 {
     "name": "vluzrmos/enotas-emissor",
     "description": "Enotas emissor php client",
+    "license": "MIT",
     "authors": [
         {
             "name": "Vagner do Carmo",
