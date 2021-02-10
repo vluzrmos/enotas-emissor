@@ -1,4 +1,5 @@
 <?php
+
 namespace Vluzrmos\Enotas\Resources;
 
 use ArrayAccess;

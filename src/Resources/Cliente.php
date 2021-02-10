@@ -2,7 +2,7 @@
 
 namespace Vluzrmos\Enotas\Resources;
 
-class Produto extends AbstractResource
+class Cliente extends AbstractResource
 {
     protected $endpoint = 'clientes';
 }
