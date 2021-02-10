@@ -6,20 +6,23 @@ use Vluzrmos\Enotas\Client\Enotas;
 use Vluzrmos\Enotas\Resources\Cliente;
 use Vluzrmos\Enotas\Resources\Produto;
 use Vluzrmos\Enotas\Resources\Venda;
+use Vluzrmos\Enotas\Resources\Webhook;
 
 class LaravelServiceProvider extends ServiceProvider
 {
     protected $resources = [
         Produto::class,
         Cliente::class,
-        Venda::class
+        Venda::class,
+        Webhook::class,
     ];
 
     protected $aliases = [
+        Cliente::class => 'enotas.clientes',
         Enotas::class => 'enotas',
         Produto::class => 'enotas.produtos',
-        Cliente::class => 'enotas.clientes',
-        Venda::class => 'enotas.vendas'
+        Venda::class => 'enotas.vendas',
+        Webhook::class => 'enotas.webhooks',
     ];
 
     public function boot()

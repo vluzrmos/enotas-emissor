@@ -104,6 +104,8 @@ $produtoService->all(2);
 $produto = $produtoService->find($id);
 
 ```
+## Resources Disponíveis
+
 
 
 #### Environment

@@ -8,7 +8,7 @@ use Vluzrmos\Enotas\Client\Enotas;
 
 abstract class AbstractResource implements JsonSerializable, ArrayAccess
 {
-    protected Enotas $enotas;
+    protected ?Enotas $enotas = null;
 
     protected $original = [];
     protected $attributes = [];
