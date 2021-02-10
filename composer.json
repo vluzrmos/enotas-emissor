@@ -1,0 +1,26 @@
+{
+    "name": "vluzrmos/enotas-emissor",
+    "description": "Enotas emissor php client",
+    "authors": [
+        {
+            "name": "Vagner do Carmo",
+            "email": "vluzrmos@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "~6.5|~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vluzrmos\\Enotas\\": "src//" 
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vluzrmos\\Enotas\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    }
+}
