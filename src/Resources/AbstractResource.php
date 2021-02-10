@@ -15,6 +15,9 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
 
     protected $endpoint = null;
 
+    protected $orderField = 'createdAt';
+    protected $orderDirection = 'desc';
+
     public function __construct(array $attributes = [])
     {
         $this->original = $attributes;
@@ -73,7 +76,7 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
         return $this->newResource((array) $data);
     }
 
-    public function all($pageNumber = 0, $pageSize = 999, $orderBy = 'createdAt desc', $filter = null)
+    public function all($pageNumber = 0, $pageSize = 999, $orderBy = null, $filter = null)
     {
         $response = $this->getEnotas()->request("GET", "{$this->endpoint}/getFilterBy", [
             "query" => compact('pageNumber', 'pageSize', 'orderBy', 'filter')
@@ -88,7 +91,7 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
 
     public function first()
     {
-        $items = $this->all(0, 1, 'createdAt asc');
+        $items = $this->all(0, 1, "{$this->orderField} asc");
 
         if (empty($items)) {
             return null;
@@ -99,7 +102,7 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
 
     public function last()
     {
-        $items = $this->all(0, 1, 'createdAt desc');
+        $items = $this->all(0, 1, "{$this->orderField} desc");
 
         if (empty($items)) {
             return null;
