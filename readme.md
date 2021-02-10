@@ -106,10 +106,16 @@ $produto = $produtoService->find($id);
 ```
 ## Resources Disponíveis
 
-
-
-#### Environment
 ```
+Vluzrmos\Enotas\Resources\Produto;
+Vluzrmos\Enotas\Resources\Webhook;
+Vluzrmos\Enotas\Resources\Cliente;
+Vluzrmos\Enotas\Resources\Venda;
+```
+
+#### Environment (Laravel)
+
+```dotenv
 ENOTAS_API_KEY=XXX-XXXXX 
 #ou
 ENOTAS_EMISSOR_API_KEY=XXX-XXXXX
