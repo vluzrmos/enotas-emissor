@@ -61,11 +61,11 @@ To exports configuration files:
 php artisan vendor:publish --provider=Vluzrmos\\Enotas\\Providers\\LaravelServiceProvider
 ```
 
-#Resources
+# Resources
 
-Cada resource (Produto, Vendas ou Cliente) pode ser usado como um serviço que listar/inserir/atualizar os dados via api (como um ActiveRecord).
+Cada resource (Produto, Vendas, Cliente ...) pode ser usado como um serviço para listar/inserir/atualizar os dados via api.
 
-```
+```php
 $produto = new Produto([
     'nome' => 'Computador All-In-One',
     'valorTotal' => 3800.00
