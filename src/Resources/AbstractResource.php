@@ -16,7 +16,6 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
     protected $endpoint = null;
 
     protected $orderField = 'createdAt';
-    protected $orderDirection = 'desc';
 
     public function __construct(array $attributes = [])
     {
