@@ -3,7 +3,9 @@ namespace Vluzrmos\Enotas\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Vluzrmos\Enotas\Client\Enotas;
+use Vluzrmos\Enotas\Resources\Cliente;
 use Vluzrmos\Enotas\Resources\Produto;
+use Vluzrmos\Enotas\Resources\Venda;
 
 class LaravelServiceProvider extends ServiceProvider
 {
@@ -65,7 +67,7 @@ class LaravelServiceProvider extends ServiceProvider
 
     public function registerAliases()
     {
-        foreach($this->aliases as $class => $alias) {
+        foreach ($this->aliases as $class => $alias) {
             $this->app->alias($class, $alias);
         }
     }
