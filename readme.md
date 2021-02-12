@@ -2,6 +2,12 @@
 
 PHP Client para manipulação da API Emissor do Enotas. https://enotas.com.br/emissor/
 
+### Documentação
+
+[API](https://help.enotas.com.br/support/solutions/articles/43000541773-como-integrar-com-o-enotas-via-api)
+
+[Webhooks](https://help.enotas.com.br/support/solutions/articles/43000559184-api-webhook-do-enotas)
+
 
 ### Standalone package
 ```php
