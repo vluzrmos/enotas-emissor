@@ -8,6 +8,11 @@ PHP Client para manipulação da API Emissor do Enotas. https://enotas.com.br/em
 
 [Webhooks](https://help.enotas.com.br/support/solutions/articles/43000559184-api-webhook-do-enotas)
 
+### Instalação
+
+```bash
+composer require vluzrmos/enotas-emissor
+```
 
 ### Standalone package
 ```php
