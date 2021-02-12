@@ -2,7 +2,7 @@
 namespace Vluzrmos\Enotas\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Vluzrmos\Enotas\Client\Enotas;
+use Vluzrmos\Enotas\HttpClient\Enotas;
 use Vluzrmos\Enotas\Resources\Cliente;
 use Vluzrmos\Enotas\Resources\Produto;
 use Vluzrmos\Enotas\Resources\Venda;

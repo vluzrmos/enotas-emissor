@@ -1,6 +1,6 @@
 <?php
 
-namespace Vluzrmos\Enotas\Client;
+namespace Vluzrmos\Enotas\HttpClient;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;

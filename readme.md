@@ -13,7 +13,7 @@ PHP Client para manipulação da API Emissor do Enotas. https://enotas.com.br/em
 ```php
 include __DIR__.'/vendor/autoload.php';
 
-use Vluzrmos\Enotas\Client\Enotas;
+use Vluzrmos\Enotas\HttpClient\Enotas;
 use Vluzrmos\Enotas\Resources\Produto;
 
 //apiKey gerada no menu "Perfil" > "Acessar configurações para nerds"

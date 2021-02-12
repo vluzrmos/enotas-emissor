@@ -2,7 +2,7 @@
 
 include __DIR__.'/vendor/autoload.php';
 
-use Vluzrmos\Enotas\Client\Enotas;
+use Vluzrmos\Enotas\HttpClient\Enotas;
 use Vluzrmos\Enotas\Resources\Produto;
 use Vluzrmos\Enotas\Resources\Webhook;
 use Vluzrmos\Enotas\Resources\Cliente;

@@ -4,7 +4,7 @@ namespace Vluzrmos\Enotas\Resources;
 
 use ArrayAccess;
 use JsonSerializable;
-use Vluzrmos\Enotas\Client\Enotas;
+use Vluzrmos\Enotas\HttpClient\Enotas;
 
 abstract class AbstractResource implements JsonSerializable, ArrayAccess
 {
@@ -14,6 +14,8 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
     protected $attributes = [];
 
     protected $endpoint = null;
+
+    protected $indexUriSegment = 'getFilterBy';
 
     protected $orderField = 'createdAt';
 
@@ -77,7 +79,7 @@ abstract class AbstractResource implements JsonSerializable, ArrayAccess
 
     public function all($pageNumber = 0, $pageSize = 999, $orderBy = null, $filter = null)
     {
-        $response = $this->getEnotas()->request("GET", "{$this->endpoint}/getFilterBy", [
+        $response = $this->getEnotas()->request("GET", "{$this->endpoint}/{$this->indexUriSegment}", [
             "query" => compact('pageNumber', 'pageSize', 'orderBy', 'filter')
         ]);
 
